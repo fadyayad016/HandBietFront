@@ -1,11 +1,12 @@
 // src/App.tsx
 import { Button } from "flowbite-react";
 import { Card } from "flowbite-react";
+import HomePhoto from "./components/custom/HomePhoto";
 
 export default function App() {
   return (
     <>
-      <Button>Click me</Button>
+      {/* <Button>Click me</Button>
       <Card
         className="max-w-sm"
         imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
@@ -72,7 +73,9 @@ export default function App() {
             Add to cart
           </a>
         </div>
-      </Card>
+      </Card> */}
+      <HomePhoto />
+
     </>
   );
 }
