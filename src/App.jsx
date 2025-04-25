@@ -6,6 +6,7 @@ import WhyUsComponents from "./components/custom/HomePageComponents/WhyUsCompone
 import ChifsRating from "./components/custom/HomePageComponents/ChifsRating";
 import HowItIsWorkComponent from "./components/custom/HomePageComponents/HowItIsWorkComponent";
 import BestChefs from "./components/custom/HomePageComponents/BestChefs";
+import CustomersOpinions from "./components/custom/HomePageComponents/CustomersOpinions";
 function App() {
   return (
     <>
@@ -13,6 +14,8 @@ function App() {
  <br />
  <BestChefs/> 
 <br />
+<CustomersOpinions/>
+
   <WhyUsComponents/>
    <ChifsRating/>
    <HowItIsWorkComponent/> 
