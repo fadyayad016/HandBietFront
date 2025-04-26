@@ -7,9 +7,12 @@ import ChifsRating from "./components/custom/HomePageComponents/ChifsRating";
 import HowItIsWorkComponent from "./components/custom/HomePageComponents/HowItIsWorkComponent";
 import BestChefs from "./components/custom/HomePageComponents/BestChefs";
 import CustomersOpinions from "./components/custom/HomePageComponents/CustomersOpinions";
+import Header from "./components/custom/HomePageComponents/Header";
 function App() {
   return (
     <>
+    {/* <Header/>
+    <br />
  <MainMeals/>
  <br />
  <BestChefs/> 
@@ -18,7 +21,7 @@ function App() {
 
   <WhyUsComponents/>
    <ChifsRating/>
-   <HowItIsWorkComponent/> 
+   <HowItIsWorkComponent/>  */}
    </>
      
   );
