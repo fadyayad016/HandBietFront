@@ -11,7 +11,7 @@ import Header from "./components/custom/HomePageComponents/Header";
 function App() {
   return (
     <>
-    {/* <Header/>
+    <Header/>
     <br />
  <MainMeals/>
  <br />
@@ -21,7 +21,7 @@ function App() {
 
   <WhyUsComponents/>
    <ChifsRating/>
-   <HowItIsWorkComponent/>  */}
+   <HowItIsWorkComponent/> 
    </>
      
   );
