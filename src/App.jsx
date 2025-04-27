@@ -8,20 +8,21 @@ import HowItIsWorkComponent from "./components/custom/HomePageComponents/HowItIs
 import BestChefs from "./components/custom/HomePageComponents/BestChefs";
 import CustomersOpinions from "./components/custom/HomePageComponents/CustomersOpinions";
 import Header from "./components/custom/HomePageComponents/Header";
+import Footer from "./components/custom/HomePageComponents/Footer";
 function App() {
   return (
     <>
-    {/* <Header/>
+    <Header/>
     <br />
  <MainMeals/>
  <br />
  <BestChefs/> 
 <br />
 <CustomersOpinions/>
-
+<Footer/>
   <WhyUsComponents/>
    <ChifsRating/>
-   <HowItIsWorkComponent/>  */}
+   <HowItIsWorkComponent/> 
    </>
      
   );
