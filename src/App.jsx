@@ -10,6 +10,7 @@ import CustomersOpinions from "./components/custom/HomePageComponents/CustomersO
 import Header from "./components/custom/HomePageComponents/Header";
 import Footer from "./components/custom/HomePageComponents/Footer";
 import ReadyToExperience from "./components/custom/HomePageComponents/ReadyToExperience";
+import HowHandBietWorks from "./components/custom/HomePageComponents/HowHandBietWorks";
 function App() {
   return (
     <>
@@ -18,6 +19,8 @@ function App() {
  <MainMeals/>
  <br />
  <BestChefs/> 
+<br />
+<HowHandBietWorks/>
 <br />
 <CustomersOpinions/>
 <ReadyToExperience/>
