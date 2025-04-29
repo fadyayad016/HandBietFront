@@ -8,6 +8,14 @@ import HowItIsWorkComponent from "./components/custom/HomePageComponents/HowItIs
 import BestChefs from "./components/custom/HomePageComponents/BestChefs";
 import CustomersOpinions from "./components/custom/HomePageComponents/CustomersOpinions";
 import Header from "./components/custom/HomePageComponents/Header";
+// import ContactUsPage from "./components/custom/ContactUs/ContactUsPage";
+// import WhyJoinTop from "./components/Hossam Walied/custom/WhyJoin/WhyJoinTop";
+import SettingUserProfile from "./components/Hossam Walied/SettingUserProfile/SettingUserProfile";
+// import UserHomePage from "./components/Hossam Walied/custom/UserHome/UserHomePage";
+import CommonQuestionPage from './components/Hossam Walied/CommonQuestionPage/CommonQuestionPage';
+import ContactUsPage from "./components/Hossam Walied/ContactUs/ContactUsPage";
+import UserHomePage from './components/Hossam Walied/UserHome/UserHomePage';
+import WhyJoinTop from './components/Hossam Walied/WhyJoin/WhyJoinTop';
 function App() {
   return (
     <>
@@ -22,6 +30,12 @@ function App() {
   <WhyUsComponents/>
    <ChifsRating/>
    <HowItIsWorkComponent/>  */}
+
+   {/* <CommonQuestionPage/> */}
+   {/* <ContactUsPage/> */}
+   {/* <WhyJoinTop/> */}
+   {/* <SettingUserProfile/> */}
+   <UserHomePage/>
    </>
      
   );
