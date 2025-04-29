@@ -32,7 +32,7 @@ function App() {
 <Footer/>
   <WhyUsComponents/>
    <ChifsRating/>
-   <HowItIsWorkComponent/>  */}
+   <HowItIsWorkComponent/>  
 
    {/* <CommonQuestionPage/> */}
    {/* <ContactUsPage/> */}
