@@ -19,26 +19,23 @@ import WhyJoinTop from './components/Hossam Walied/WhyJoin/WhyJoinTop';
 function App() {
   return (
     <>
-    <Header/>
+    {/* <Header/>
     <br />
  <MainMeals/>
  <br />
  <BestChefs/> 
 <br />
-<HowHandBietWorks/>
-<br />
 <CustomersOpinions/>
-<ReadyToExperience/>
-<Footer/>
+
   <WhyUsComponents/>
    <ChifsRating/>
-   <HowItIsWorkComponent/>  
+   <HowItIsWorkComponent/>  */}
 
    {/* <CommonQuestionPage/> */}
    {/* <ContactUsPage/> */}
    {/* <WhyJoinTop/> */}
-   {/* <SettingUserProfile/> */}
-   <UserHomePage/>
+   <SettingUserProfile/>
+   {/* <UserHomePage/> */}
    </>
      
   );

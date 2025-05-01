@@ -6,15 +6,16 @@ import SettingProfile from "./SettingProfile";
 import PasswordSetting from "./PasswordSetting";
 import AddressSetting from "./AddressSetting";
 import NotificationSettings from "./NotificationSettings";
+import AsideBottonProfile from "./AsideBottonProfile";
 
 const SettingUserProfile = () => {
     return (
         <>
             <div className="w-full flex" dir="rtl">
-                <aside className="w-1/5 bg-white p-4 relative min-h-screen">
+                <aside className="w-1/5 bg-white p-4 relative min-h-screen hidden md:block">
                     <AsideProfile />
                 </aside>
-                <div className="w-4/5 bg-gray-100 p-4">
+                <div className="w-full md:w-4/5 bg-gray-100 p-4 pb-20">
                     <h1 className="text-2xl font-bold mb-2">اعدادات الحساب</h1>
                     <p className="text-gray-400">ادارة معلومات حسابك واعدادات التفضيلات</p>
                     <div className="bg-white p-1 rounded-xl shadow-md my-4 flex gap-3">
@@ -39,6 +40,9 @@ const SettingUserProfile = () => {
                     {/* <PasswordSetting /> */}
                     <AddressSetting />
                     {/* <NotificationSettings /> */}
+
+                        <AsideBottonProfile />
+                    
                     
                 </div>
             </div>
