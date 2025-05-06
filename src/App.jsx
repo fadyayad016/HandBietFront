@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import MainMeals from "./components/custom/HomePageComponents/MainMeals";
 import WhyUsComponents from "./components/custom/HomePageComponents/WhyUsComponents";
 import ChifsRating from "./components/custom/HomePageComponents/ChifsRating";
@@ -12,26 +11,41 @@ import Footer from "./components/custom/HomePageComponents/Footer";
 import ReadyToExperience from "./components/custom/HomePageComponents/ReadyToExperience";
 import HowHandBietWorks from "./components/custom/HomePageComponents/HowHandBietWorks";
 import AboutUs from "./components/custom/AboutUs";
+
+import SettingUserProfile from "./components/Hossam Walied/SettingUserProfile/SettingUserProfile";
+import CommonQuestionPage from './components/Hossam Walied/CommonQuestionPage/CommonQuestionPage';
+import ContactUsPage from "./components/Hossam Walied/ContactUs/ContactUsPage";
+import UserHomePage from './components/Hossam Walied/UserHome/UserHomePage';
+import WhyJoinTop from './components/Hossam Walied/WhyJoin/WhyJoinTop';
+import FavouritePage from "./components/Hossam Walied/favouritePage/FavouritePage";
+import OrderHistoryPage from "./components/Hossam Walied/OrderHistory/OrderHistoryPage";
+
 function App() {
   return (
     <>
-    {/* <Header/>
-    <br />
- <MainMeals/>
- <br />
- <BestChefs/> 
-<br />
-<HowHandBietWorks/>
-<br />
-<CustomersOpinions/>
-<ReadyToExperience/>
-<Footer/>
-  <WhyUsComponents/>
-   <ChifsRating/>
-   <HowItIsWorkComponent/>  */}
-   <AboutUs/>
-   </>
-     
+      {/* <Header />
+      <br />
+      <MainMeals />
+      <br />
+      <BestChefs />
+      <br />
+      <CustomersOpinions />
+      <WhyUsComponents />
+      <ChifsRating />
+      <HowItIsWorkComponent />
+      <ReadyToExperience />
+      <HowHandBietWorks /> */}
+      {/* <AboutUs /> */}
+
+      {/* <CommonQuestionPage /> */}
+      {/* <ContactUsPage /> */}
+      {/* <WhyJoinTop /> */}
+      {/* <SettingUserProfile /> */}
+      {/* <UserHomePage /> */}
+      {/* <OrderHistoryPage /> */}
+
+      {/* <Footer /> */}
+    </>
   );
 }
 
