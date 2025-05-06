@@ -11,10 +11,11 @@ import Header from "./components/custom/HomePageComponents/Header";
 import Footer from "./components/custom/HomePageComponents/Footer";
 import ReadyToExperience from "./components/custom/HomePageComponents/ReadyToExperience";
 import HowHandBietWorks from "./components/custom/HomePageComponents/HowHandBietWorks";
+import AboutUs from "./components/custom/AboutUs";
 function App() {
   return (
     <>
-    <Header/>
+    {/* <Header/>
     <br />
  <MainMeals/>
  <br />
@@ -27,7 +28,8 @@ function App() {
 <Footer/>
   <WhyUsComponents/>
    <ChifsRating/>
-   <HowItIsWorkComponent/> 
+   <HowItIsWorkComponent/>  */}
+   <AboutUs/>
    </>
      
   );
