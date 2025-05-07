@@ -7,17 +7,18 @@ const FrequentlyQuestions = () => {
       <p className="text-lg text-[#4B5563] mb-6">
         إجابات على أكثر الأسئلة التي تردنا من الطهاة الجدد
       </p>
-<br />
+      <br />
       {/* Question 1 */}
       <div className="mb-6">
-        <h3 className="text-xl  font-bold text-[#1F2937] mb-2">
-      ؟  HandBiet  ما هى متطلبات الانضمام الى 
+        <h3 className="text-xl font-bold text-[#1F2937] mb-2">
+          ؟ HandBiet ما هى متطلبات الانضمام الى
         </h3>
         <p className="text-[#4B5563] text-sm">
           تحتاج إلى أن تكون مقيمًا في المملكة العربية السعودية، وأن تمتلك مهارات طهي جيدة، وأن تكون قادرًا على إعداد وجبات
           بجودة عالية. كما نحتاج إلى بعض المستندات الرسمية للتحقق من هويتك
         </p>
       </div>
+      <hr className="my-6 border-t border-gray-300 w-full" />
 
       {/* Question 2 */}
       <div className="mb-6">
@@ -29,6 +30,7 @@ const FrequentlyQuestions = () => {
           مناسب بناءً على أسعار السوق وجودة وجباتك
         </p>
       </div>
+      <hr className="my-6 border-t border-gray-300 w-full" />
 
       {/* Question 3 */}
       <div className="mb-6">
@@ -40,6 +42,7 @@ const FrequentlyQuestions = () => {
           والأرباح من خلال لوحة التحكم الخاصة بك
         </p>
       </div>
+      <hr className="my-6 border-t border-gray-300 w-full" />
 
       {/* Question 4 */}
       <div className="mb-6">

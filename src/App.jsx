@@ -13,7 +13,6 @@ import HowHandBietWorks from "./components/custom/HomePageComponents/HowHandBiet
 import AboutUs from "./components/custom/AboutUs";
 import ImgHome from "./components/custom/HomePageComponents/ImgHome";
 import FrequentlyQuestions from "./components/custom/FrequentlyQuestions";
-
 import SettingUserProfile from "./components/Hossam Walied/SettingUserProfile/SettingUserProfile";
 import CommonQuestionPage from './components/Hossam Walied/CommonQuestionPage/CommonQuestionPage';
 import ContactUsPage from "./components/Hossam Walied/ContactUs/ContactUsPage";
@@ -21,6 +20,7 @@ import UserHomePage from './components/Hossam Walied/UserHome/UserHomePage';
 import WhyJoinTop from './components/Hossam Walied/WhyJoin/WhyJoinTop';
 import FavouritePage from "./components/Hossam Walied/favouritePage/FavouritePage";
 import OrderHistoryPage from "./components/Hossam Walied/OrderHistory/OrderHistoryPage";
+import ContactUs from "./components/custom/ContactUs";
 
 function App() {
   return (
@@ -50,9 +50,10 @@ function App() {
    <HowHandBietWorks />
       <ReadyToExperience />
       {/* <Footer /> */}
-    {/* <AboutUs /> */} 
+    {/* <AboutUs />  */}
     {/* <ImgHome/> */}
     {/* <FrequentlyQuestions/> */}
+    {/* <ContactUs/> */}
     </>
   );
 }
