@@ -12,6 +12,7 @@ import ReadyToExperience from "./components/custom/HomePageComponents/ReadyToExp
 import HowHandBietWorks from "./components/custom/HomePageComponents/HowHandBietWorks";
 import AboutUs from "./components/custom/AboutUs";
 import ImgHome from "./components/custom/HomePageComponents/ImgHome";
+import FrequentlyQuestions from "./components/custom/FrequentlyQuestions";
 
 import SettingUserProfile from "./components/Hossam Walied/SettingUserProfile/SettingUserProfile";
 import CommonQuestionPage from './components/Hossam Walied/CommonQuestionPage/CommonQuestionPage';
@@ -51,6 +52,7 @@ function App() {
       {/* <Footer /> */}
     {/* <AboutUs /> */} 
     {/* <ImgHome/> */}
+    {/* <FrequentlyQuestions/> */}
     </>
   );
 }
