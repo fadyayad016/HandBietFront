@@ -30,7 +30,6 @@ function App() {
             <WhyUsComponents />
       <ChifsRating />
       <HowItIsWorkComponent />
-
       <CommonQuestionPage />
       <ContactUsPage />
       <WhyJoinTop />

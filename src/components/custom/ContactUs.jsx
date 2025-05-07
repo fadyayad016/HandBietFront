@@ -167,19 +167,19 @@ const ContactUs = () => {
         <h2 className="text-3xl font-bold text-[#1F2937] mb-2">الأسئلة الشائعة</h2>
         <div className="w-16 h-1 bg-orange-500 mx-auto mb-6"></div>
 
-        <div className="block bg-white border border-[1px] border-gray-300 rounded-lg p-4 mb-4">
+        <div className="block bg-white border border-gray-300 rounded-lg p-4 mb-4">
           <h3 className="text-lg font-bold text-[#1F2937]">كيف يمكنني التواصل مع خدمة العملاء؟</h3>
         </div>
 
-        <div className="block bg-white border border-[1px] border-gray-300 rounded-lg p-4 mb-4">
+        <div className="block bg-white border border-gray-300 rounded-lg p-4 mb-4">
           <h3 className="text-lg font-bold text-[#1F2937]">ما هي أوقات عمل خدمة العملاء؟</h3>
         </div>
 
-        <div className="block bg-white border border-[1px] border-gray-300 rounded-lg p-4 mb-4">
+        <div className="block bg-white border border-gray-300 rounded-lg p-4 mb-4">
           <h3 className="text-lg font-bold text-[#1F2937]">كيف يمكنني تقديم شكوى أو اقتراح؟</h3>
         </div>
 
-        <div className="block bg-white border border-[1px] border-gray-300 rounded-lg p-4 mb-4">
+        <div className="block bg-white border border-gray-300 rounded-lg p-4 mb-4">
           <h3 className="text-lg font-bold text-[#1F2937]">هل لديكم فروع في مدن أخرى غير الرياض؟</h3>
         </div>
       </div>
