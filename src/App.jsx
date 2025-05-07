@@ -11,6 +11,7 @@ import Footer from "./components/custom/HomePageComponents/Footer";
 import ReadyToExperience from "./components/custom/HomePageComponents/ReadyToExperience";
 import HowHandBietWorks from "./components/custom/HomePageComponents/HowHandBietWorks";
 import AboutUs from "./components/custom/AboutUs";
+import ImgHome from "./components/custom/HomePageComponents/ImgHome";
 
 import SettingUserProfile from "./components/Hossam Walied/SettingUserProfile/SettingUserProfile";
 import CommonQuestionPage from './components/Hossam Walied/CommonQuestionPage/CommonQuestionPage';
@@ -23,28 +24,33 @@ import OrderHistoryPage from "./components/Hossam Walied/OrderHistory/OrderHisto
 function App() {
   return (
     <>
-      {/* <Header />
-      <br />
-      <MainMeals />
-      <br />
-      <BestChefs />
-      <br />
-      <CustomersOpinions />
-      <WhyUsComponents />
+      
+      {/* <MainMeals />
+            <WhyUsComponents />
       <ChifsRating />
       <HowItIsWorkComponent />
+
+      <CommonQuestionPage />
+      <ContactUsPage />
+      <WhyJoinTop />
+      <SettingUserProfile />
+      <UserHomePage />
+       <OrderHistoryPage /> */}
+
+
+
+
+
+
+
+      {/* <Header />
+      <BestChefs />
+      <CustomersOpinions />
+   <HowHandBietWorks />
       <ReadyToExperience />
-      <HowHandBietWorks /> */}
-      {/* <AboutUs /> */}
-
-      {/* <CommonQuestionPage /> */}
-      {/* <ContactUsPage /> */}
-      {/* <WhyJoinTop /> */}
-      {/* <SettingUserProfile /> */}
-      {/* <UserHomePage /> */}
-      {/* <OrderHistoryPage /> */}
-
       {/* <Footer /> */}
+    {/* <AboutUs /> */} 
+    {/* <ImgHome/> */}
     </>
   );
 }
