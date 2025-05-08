@@ -21,6 +21,7 @@ import WhyJoinTop from './components/Hossam Walied/WhyJoin/WhyJoinTop';
 import FavouritePage from "./components/Hossam Walied/favouritePage/FavouritePage";
 import OrderHistoryPage from "./components/Hossam Walied/OrderHistory/OrderHistoryPage";
 import ContactUs from "./components/custom/ContactUs";
+import AllQuestions from "./components/custom/AllQuestions";
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
     {/* <ImgHome/> */}
     {/* <FrequentlyQuestions/> */}
     {/* <ContactUs/> */}
+    {/* <AllQuestions/> */}
     </>
   );
 }
