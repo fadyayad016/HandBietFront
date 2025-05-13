@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import MainMeals from "./components/custom/HomePageComponents/MainMeals";
 import WhyUsComponents from "./components/custom/HomePageComponents/WhyUsComponents";
 import ChifsRating from "./components/custom/HomePageComponents/ChifsRating";
