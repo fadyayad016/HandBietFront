@@ -8,10 +8,15 @@ import HowItIsWorkComponent from "./components/custom/HomePageComponents/HowItIs
 import BestChefs from "./components/custom/HomePageComponents/BestChefs";
 import CustomersOpinions from "./components/custom/HomePageComponents/CustomersOpinions";
 import Header from "./components/custom/HomePageComponents/Header";
+import FoodMenu from "../src/components/Ammar Adel/Components/FoodMenu";
+import Menu from "./components/Ammar Adel/Pages/menu";
+import CookerMenuParent from "./components/Ammar Adel/Pages/CookerMenuParent";
+
+ 
 function App() {
   return (
     <>
-    <Header/>
+      {/* <Header/>
     <br />
  <MainMeals/>
  <br />
@@ -21,9 +26,11 @@ function App() {
 
   <WhyUsComponents/>
    <ChifsRating/>
-   <HowItIsWorkComponent/> 
-   </>
-     
+   <HowItIsWorkComponent/>  */}
+      {/* <Menu /> */}
+      <CookerMenuParent />
+    </>
+
   );
 }
 
