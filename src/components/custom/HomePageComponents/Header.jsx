@@ -22,20 +22,20 @@ const Header = () => {
                 </div>
 
                 {/* Middle Section */}
-                <nav className="flex space-x-6">
-                <a href="#" className="text-black hover:text-orange-500">
+                <nav className="  flex space-x-6">
+                <a href="#" className="text-gray-700 hover:text-orange-500">
                         تواصل معنا
                     </a>
-                    <a href="#" className="text-black hover:text-orange-500">
+                    <a href="#" className="text-gray-700 hover:text-orange-500">
                         كيف يعمل
                     </a>
-                    <a href="#" className="text-black hover:text-orange-500">
+                    <a href="#" className="text-gray-700 hover:text-orange-500">
                         الطهاة
                     </a>
-                    <a href="#" className="text-black hover:text-orange-500">
+                    <a href="#" className="text-gray-700 hover:text-orange-500">
                         الوجبات
                     </a>
-                    <a href="#" className="text-black hover:text-orange-500">
+                    <a href="#" className="text-gray-700 hover:text-orange-500">
                         الرئيسية
                     </a>
                   

@@ -1,20 +1,17 @@
 import React from 'react'
 
-const MainMeals = () => {
+const SimilarMeals = () => {
     return (
-        <div dir='rtl' className="px-4 sm:px-6 lg:px-8">
-
-            <h1 className="text-2xl sm:text-3xl font-bold  mb-4">الوجبات المميزة</h1>
-            <h4 className="text-lg sm:text-xl  mb-8">استمتع بأشهى الوجبات المعدة منزلياً بأيدي أمهر الطهاة</h4>
+        <div dir='rtl' className="px-4 sm:px-6 lg:px-8 my-9">
+            <h4 className="text-lg sm:text-xl font-bold text-center my-8">وجبات مشابهه</h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
 
                 {/* Card 1 */}
                 <div className="w-full max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                     <a href="#" class="relative ">
 
-                        <img className="p-2 rounded-t-lg w-full h-48 object-cover" src={""} alt="product image" />
+                        <img className="p-2 rounded-t-lg w-full  h-38 object-cover" src={"/public/باستا.png"} alt="product image" />
                         {/* badge */}
                         <span class="absolute top-4 left-3 bg-[#eab308] text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded-full  inline-flex items-center">الاكثر طلبا
                             <svg className="w-4 h-4 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -29,6 +26,7 @@ const MainMeals = () => {
                             </svg>
                         </span>
 
+
                         <span class="absolute top-4 left-23 bg-[#22c55e] text-white text-xs font-medium me-25 px-2.5 py-0.5 rounded-full  inline-flex items-center">صحي
                             <svg className="w-4 h-4 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.83892 12.4543s1.24988-3.08822-.21626-5.29004C8.15656 4.96245 4.58671 4.10885 4.39794 4.2436c-.18877.13476-1.11807 3.32546.34803 5.52727 1.4661 2.20183 5.09295 2.68343 5.09295 2.68343Zm0 0C10.3389 13.4543 12 15 12 18v2c0-2-.4304-3.4188 2.0696-5.9188m0 0s-.4894-2.7888 1.1206-4.35788c1.6101-1.56907 4.4903-1.54682 4.6701-1.28428.1798.26254.4317 2.84376-1.0809 4.31786-1.61 1.5691-4.7098 1.3243-4.7098 1.3243Z" />
@@ -36,8 +34,6 @@ const MainMeals = () => {
                         </span>
 
                     </a>
-
-
                     <div className="px-5 pb-5">
                         <h2 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"> سلطة الكينوا الصحية</h2>
                         <h5 className="text-l font-medium tracking-tight text-gray-900 dark:text-white">سلطة غنية بالبروتين والخضروات الطازجة</h5>
@@ -56,17 +52,26 @@ const MainMeals = () => {
                             <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">3.3</span>
                         </div>
                         <div className="flex items-center justify-between">
-                            <span className="text-xl font-bold text-gray-900 dark:text-white">رس 599</span>
-                            {/* <button></button> */}
-                            <a href="#" className="text-white bg-mainColor hover:bg-hoverColor focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">اضف الي العربه ←</a>
+                            <span className="text-xl font-bold text-gray-900 dark:text-white">599 رس </span>
+                            <button>
+                                <svg className="w-6 h-6 text-mainColor hover:text-hoverColor dark:text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 7.757v8.486M7.757 12h8.486M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                            </button>
+
                         </div>
                     </div>
                 </div>
 
+
+
+
+
                 {/* Card 2 */}
                 <div className="w-full max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                     <a href="#" class="relative ">
-                        <img className="p-2 rounded-t-lg w-full h-48 object-cover" src={"/public/باستا.png"} alt="product image" />
+
+                        <img className="p-2 rounded-t-lg w-full  h-38 object-cover" src={"/public/باستا.png"} alt="product image" />
                         {/* badge */}
                         <span class="absolute top-4 left-3 bg-[#eab308] text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded-full  inline-flex items-center">الاكثر طلبا
                             <svg className="w-4 h-4 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -86,7 +91,6 @@ const MainMeals = () => {
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.83892 12.4543s1.24988-3.08822-.21626-5.29004C8.15656 4.96245 4.58671 4.10885 4.39794 4.2436c-.18877.13476-1.11807 3.32546.34803 5.52727 1.4661 2.20183 5.09295 2.68343 5.09295 2.68343Zm0 0C10.3389 13.4543 12 15 12 18v2c0-2-.4304-3.4188 2.0696-5.9188m0 0s-.4894-2.7888 1.1206-4.35788c1.6101-1.56907 4.4903-1.54682 4.6701-1.28428.1798.26254.4317 2.84376-1.0809 4.31786-1.61 1.5691-4.7098 1.3243-4.7098 1.3243Z" />
                             </svg>
                         </span>
-
                     </a>
 
 
@@ -108,18 +112,26 @@ const MainMeals = () => {
                             <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">4.9</span>
                         </div>
                         <div className="flex items-center justify-between">
-                            <span className="text-xl font-bold text-gray-900 dark:text-white">رس 195</span>
-                            <a href="#" className="text-white bg-mainColor hover:bg-hoverColor focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">اضف الي العربه ←</a>
+                            <span className="text-xl font-bold text-gray-900 dark:text-white">249 رس </span>
+                            <button>
+                                <svg className="w-6 h-6 text-mainColor hover:text-hoverColor dark:text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 7.757v8.486M7.757 12h8.486M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
+
+
+
+
 
 
                 {/* Card 3 */}
                 <div className="w-full max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                     <a href="#" class="relative ">
 
-                        <img className="p-2 rounded-t-lg w-full h-48 object-cover" src={"/public/برجر.png"} alt="product image" />
+                        <img className="p-2 rounded-t-lg w-full  h-38 object-cover" src={"/public/برجر.png"} alt="product image" />
                         {/* badge */}
                         <span class="absolute top-4 left-3 bg-[#eab308] text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded-full  inline-flex items-center">الاكثر طلبا
                             <svg className="w-4 h-4 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -139,7 +151,6 @@ const MainMeals = () => {
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.83892 12.4543s1.24988-3.08822-.21626-5.29004C8.15656 4.96245 4.58671 4.10885 4.39794 4.2436c-.18877.13476-1.11807 3.32546.34803 5.52727 1.4661 2.20183 5.09295 2.68343 5.09295 2.68343Zm0 0C10.3389 13.4543 12 15 12 18v2c0-2-.4304-3.4188 2.0696-5.9188m0 0s-.4894-2.7888 1.1206-4.35788c1.6101-1.56907 4.4903-1.54682 4.6701-1.28428.1798.26254.4317 2.84376-1.0809 4.31786-1.61 1.5691-4.7098 1.3243-4.7098 1.3243Z" />
                             </svg>
                         </span>
-
                     </a>
 
 
@@ -161,8 +172,12 @@ const MainMeals = () => {
                             <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">4.2</span>
                         </div>
                         <div className="flex items-center justify-between">
-                            <span className="text-xl font-bold text-gray-900 dark:text-white">رس 380</span>
-                            <a href="#" className="text-white bg-mainColor hover:bg-hoverColor focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">اضف الي العربه ←</a>
+                            <span className="text-xl font-bold text-gray-900 dark:text-white">380 رس </span>
+                            <button>
+                                <svg className="w-6 h-6 text-mainColor hover:text-hoverColor dark:text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 7.757v8.486M7.757 12h8.486M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -173,7 +188,7 @@ const MainMeals = () => {
                 <div className="w-full max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                     <a href="#" class="relative ">
 
-                        <img className="p-2 rounded-t-lg w-full h-48 object-cover" src={"/public/بيتزا.png"} alt="product image" />
+                        <img className="p-2 rounded-t-lg w-full  h-38 object-cover" src={"/public/بيتزا.png"} alt="product image" />
                         {/* badge */}
                         <span class="absolute top-4 left-3 bg-[#eab308] text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded-full  inline-flex items-center">الاكثر طلبا
                             <svg className="w-4 h-4 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -193,7 +208,6 @@ const MainMeals = () => {
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.83892 12.4543s1.24988-3.08822-.21626-5.29004C8.15656 4.96245 4.58671 4.10885 4.39794 4.2436c-.18877.13476-1.11807 3.32546.34803 5.52727 1.4661 2.20183 5.09295 2.68343 5.09295 2.68343Zm0 0C10.3389 13.4543 12 15 12 18v2c0-2-.4304-3.4188 2.0696-5.9188m0 0s-.4894-2.7888 1.1206-4.35788c1.6101-1.56907 4.4903-1.54682 4.6701-1.28428.1798.26254.4317 2.84376-1.0809 4.31786-1.61 1.5691-4.7098 1.3243-4.7098 1.3243Z" />
                             </svg>
                         </span>
-
                     </a>
 
 
@@ -215,20 +229,18 @@ const MainMeals = () => {
                             <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">3.9</span>
                         </div>
                         <div className="flex items-center justify-between">
-                            <span className="text-xl font-bold text-gray-900 dark:text-white">رس 400</span>
-                            <a href="#" className="text-white bg-mainColor hover:bg-hoverColor focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">اضف الي العربه ←</a>
+                            <span className="text-xl font-bold text-gray-900 dark:text-white">220 رس </span>
+                            <button>
+                                <svg className="w-6 h-6 text-mainColor hover:text-hoverColor dark:text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 7.757v8.486M7.757 12h8.486M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
-
-
-            </div>
-            <div className="flex items-center justify-center mt-8">
-                <a href="#" className="text-white bg-mainColor hover:bg-hoverColor focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800  ">رؤيه جميع المنتجات ←</a>
             </div>
         </div>
-
     )
 }
 
-export default MainMeals
+export default SimilarMeals
