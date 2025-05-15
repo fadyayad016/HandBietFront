@@ -22,6 +22,7 @@ import FavouritePage from "./components/Hossam Walied/favouritePage/FavouritePag
 import OrderHistoryPage from "./components/Hossam Walied/OrderHistory/OrderHistoryPage";
 import ContactUs from "./components/custom/ContactUs";
 import AllQuestions from "./components/custom/AllQuestions";
+import Meals from "./components/custom/Meals";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
     {/* <FrequentlyQuestions/> */}
     {/* <ContactUs/> */}
     {/* <AllQuestions/> */}
+    {/* <Meals/> */}
     </>
   );
 }
