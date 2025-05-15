@@ -39,8 +39,8 @@ const ChifsRating = () => {
 
 
 
-                 {/* card 2 */}
-                 <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                {/* card 2 */}
+                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                     {/* name ang image */}
                     <div class="flex items-center mb-4">
                         <img class="w-10 h-10 me-4 rounded-full" src="/public/ChifsRatingImages/chief2.png" alt="" />
@@ -68,8 +68,8 @@ const ChifsRating = () => {
 
 
 
-                 {/* card 3 */}
-                 <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+                {/* card 3 */}
+                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
                     {/* name ang image */}
                     <div class="flex items-center mb-4">
                         <img class="w-10 h-10 me-4 rounded-full" src="/public/ChifsRatingImages/chief3.png" alt="" />
