@@ -9,61 +9,124 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  FaHome,
+  FaUtensils,
+  FaShoppingBag,
+  FaChartLine,
+  FaStar,
+  FaUser,
+  FaCog,
+  FaSignOutAlt,
+  FaBell,
+  FaBars,
+  FaPlusCircle,
+  FaEdit,
+  FaCheck,
+  FaEye,
+  FaClock,
+  FaArrowUp,
+  FaStarHalfAlt,
+  FaShoppingBag as FaOrders,
+  FaWallet,
+  FaChartPie,
+} from "react-icons/fa";
 
 const SideMenu = () => {
   return (
     <>
-      <div className="bg-white w-full h-full rounded-xl shadow-lg mt-0 relative">
-        <div className="flex items-center justify-baseline pb-2 pt-2 bg-white ">
-          <FontAwesomeIcon
-            className="bg-amber-500 p-4  rounded-3xl"
-            icon={faUtensils}
-          />
-          <p className="text-amber-500 ms-3">HandBiet</p>
-        </div>
-        <hr className="my-4" />
-        <div className="flex items-center bg-white">
-          <img src="Ammar.png" alt="profile image" className="size-2" />
-          <div className="ms-3  hidden md:flex flex-col">
-            <p className="font-bold">الطاهي محمد</p>
-            <p className="text-gray-400">عميل منذ 2022</p>
+      <div
+        className={`sidebar bg-white w-64 flex-shrink-0 shadow-lg ${"block"} md:block transition-all duration-300 ease-in-out`}
+      >
+        <nav className="p-4">
+          <div className="mb-8">
+            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
+              القائمة الرئيسية
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center p-2 text-orange-600 bg-orange-50 rounded-lg"
+                >
+                  <FaHome className="ml-3" />
+                  <span>الرئيسية</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+                >
+                  <FaUtensils className="ml-3" />
+                  <span>قائمة الطعام</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+                >
+                  <FaShoppingBag className="ml-3" />
+                  <span>الطلبات</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+                >
+                  <FaChartLine className="ml-3" />
+                  <span>الإحصائيات</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+                >
+                  <FaStar className="ml-3" />
+                  <span>التقييمات</span>
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <hr className="my-4" />
-        <div>
-          <div className="flex items-center cursor-pointer text-[#6B7280]  p-2 mb-2 rounded-lg hover:bg-gray-200">
-            <FontAwesomeIcon className="" icon={faHouse} />
-            <p className="ms-3 hidden md:block ">الصفحة الرئيسية</p>
-          </div>
-          <div className="flex items-center cursor-pointer text-[#F97316] bg-amber-300 p-2 mb-2 hover:bg-gray-200">
-            <FontAwesomeIcon icon={faUtensils} />
-            <p className="ms-3 hidden md:block">قائمة الطعام </p>
-          </div>
-          <div className="flex items-center cursor-pointer text-[#6B7280]  p-2 mb-2 hover:bg-gray-200">
-            <FontAwesomeIcon icon={faBagShopping} />
-            <p className="ms-3 hidden md:block">الطلبات</p>
-          </div>
-          <div className="flex items-center cursor-pointer text-[#6B7280]  p-2 mb-2 hover:bg-gray-200">
-            <FontAwesomeIcon icon={faSignal} />
-            <p className="ms-3 hidden md:block">الاحصائيات</p>
-          </div>
-          <div className="flex items-center cursor-pointer text-[#6B7280]  p-2 mb-2 hover:bg-gray-200">
-            <FontAwesomeIcon icon={faUser} />
-            <p className="ms-3 hidden md:block">الحساب</p>
-          </div>
-          <div className="flex items-center cursor-pointer text-[#6B7280]  p-2 mb-2 hover:bg-gray-200">
-            <FontAwesomeIcon icon={faGear} />
-            <p className="ms-3 hidden md:block">الاعدادات</p>
-          </div>
-        </div>
 
-        <div className="absolute bottom-4 w-full px-4">
-          <hr className="my-4" />
-          <div className="flex items-center cursor-pointer text-[#6B7280] p-2 mb-2  hover:bg-gray-200 ">
-            <FontAwesomeIcon icon={faRightFromBracket} />
-            <p className="ms-3 hidden md:block">تسجيل الخروج</p>
+          <div>
+            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
+              الإعدادات
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+                >
+                  <FaUser className="ml-3" />
+                  <span>الحساب</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+                >
+                  <FaCog className="ml-3" />
+                  <span>الإعدادات</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="flex items-center p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+                >
+                  <FaSignOutAlt className="ml-3" />
+                  <span>تسجيل الخروج</span>
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
+        </nav>
       </div>
     </>
   );

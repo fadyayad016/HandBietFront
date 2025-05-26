@@ -2,11 +2,15 @@ import React from "react";
 import FoodMenu from "./Components/FoodMenu";
 import { useGetMealsQuery } from "../../features/api/mealsApi";
 import Loading from "../../components/Loading";
+import { useGetFavouriteQuery } from "../../features/api/favouriteApi";
 
 const BrowseMenu = () => {
   // const { data, isLoading, isError, error } = useGetMealsQuery();
   const { data, error, isLoading, isFetching, isSuccess, isError } =
     useGetMealsQuery();
+  const { data: favouriteData, isLoading: isLoadingFavourite } =
+    useGetFavouriteQuery();
+
   return (
     <>
       {isLoading && <Loading></Loading>}
@@ -29,7 +33,7 @@ const BrowseMenu = () => {
               <input
                 type="text"
                 id="default-search"
-                className="block w-full p-3  ps-10 text-sm text-gray-900 border border-gray-300 rounded-4xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block w-full p-3  ps-10 text-sm text-gray-900 border border-gray-300 rounded-4xl bg-gray-50 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
                 placeholder="ابحث عن وجبة ،طبق أو مكون ..."
                 required
               />
@@ -57,7 +61,9 @@ const BrowseMenu = () => {
         {/* <div className="col-span-1">
           <SideMenu />
         </div> */}
-        {isSuccess && <FoodMenu meals={data} />}
+        {isSuccess && !isLoadingFavourite && (
+          <FoodMenu meals={data} favouriteData={favouriteData} />
+        )}
       </div>
     </>
   );

@@ -1,9 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Dropdown, DropdownItem } from "flowbite-react";
 import { PaginationComponent } from "./Pagination";
+import { useNavigate } from "react-router";
+import { useAddToCartMutation } from "../../../features/api/cartApi";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
-const FoodMenu = ({ meals }) => {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaRegHeart } from "react-icons/fa";
+import {
+  useAddToFavouriteMutation,
+  useDeleteFavouriteMutation,
+} from "../../../features/api/favouriteApi";
+import { useSelector } from "react-redux";
+import { Bounce, toast } from "react-toastify";
+
+const FoodMenu = ({ meals, favouriteData }) => {
+  const user = useSelector((state) => state.auth.user);
+  const [addToCart] = useAddToCartMutation();
+  const [addToFavourite] = useAddToFavouriteMutation();
+  const [deleteFavourite] = useDeleteFavouriteMutation();
+  const navegate = useNavigate();
+  const [currentPage, setCurrentPage] = useState(0);
+  const [mealsPerPage, setMealsPerPage] = useState(meals.slice(currentPage, 9));
+
+  const handleAddToCart = (id) => {
+    if (!user)
+      toast.warning("You must be logged in to add to cart", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    addToCart({ mealId: id, quantity: 1 });
+  };
+
+  const toggleFavourite = (meal, event) => {
+    event.stopPropagation();
+    if (favouriteData.some((fav) => fav._id === meal._id)) {
+      deleteFavourite(meal._id);
+    } else {
+      addToFavourite(meal._id);
+    }
+  };
+  const onPageChange = (page) => {
+    console.log(page);
+    page--;
+    console.log(page);
+    setCurrentPage(page);
+    setMealsPerPage(meals.slice(page * 9, page * 9 + 9));
+  };
   console.log(meals);
   return (
     <>
@@ -22,7 +73,7 @@ const FoodMenu = ({ meals }) => {
             className="bg-white text-black px-2 m-0 "
             size="sm"
             renderTrigger={() => (
-              <a class="bg-[#f97316] text-white text-xs cursor-pointer  font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">
+              <a class="bg-[#f97316] text-white text-xs cursor-pointer  font-semibold px-2.5 py-0.5 rounded-sm dark:bg-orange-200 dark:text-orange-800 ms-3">
                 الأجدد
               </a>
             )}
@@ -43,7 +94,7 @@ const FoodMenu = ({ meals }) => {
             className="bg-white text-black px-2 m-0 "
             size="sm"
             renderTrigger={() => (
-              <a class="bg-[#f97316] text-white text-xs cursor-pointer  font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">
+              <a class="bg-[#f97316] text-white text-xs cursor-pointer  font-semibold px-2.5 py-0.5 rounded-sm dark:bg-orange-200 dark:text-orange-800 ms-3">
                 الكل
               </a>
             )}
@@ -60,11 +111,23 @@ const FoodMenu = ({ meals }) => {
         className="grid  items-center  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pe-8 "
         dir="rtl"
       >
-        {meals.map((meal) => (
+        {mealsPerPage.map((meal) => (
           <div
             key={meal._id}
-            class="w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ms-5"
+            class="w-full relative bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 ms-5"
+            onClick={() => navegate(`/meals/${meal._id}`)}
           >
+            <button
+              onClick={(event) => toggleFavourite(meal, event)}
+              type="button"
+              className="absolute top-3 z-1 right-4 text-red-500 text-xl bg-white rounded-full p-1 w-8 h-8 flex items-center justify-center shadow  hover:bg-red-100 hover:scale-105 transition duration-300"
+            >
+              {favouriteData?.some((fav) => fav._id === meal._id) ? (
+                <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+              ) : (
+                <FaRegHeart style={{ color: "red" }} />
+              )}
+            </button>
             <a href="#" className="relative">
               <img
                 class=" rounded-t-lg w-full h-48 object-cover "
@@ -87,7 +150,7 @@ const FoodMenu = ({ meals }) => {
                 </span>
               </a>
               <div class="flex items-center mt-2.5 mb-5">
-                <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-1 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-0">
+                <span class="bg-orange-100  max-w-64 truncate text-orange-800 text-xs font-semibold px-1 py-0.5 rounded-sm dark:bg-orange-200 dark:text-orange-800 ms-0">
                   {meal.description}
                 </span>
               </div>
@@ -112,6 +175,7 @@ const FoodMenu = ({ meals }) => {
                       } else {
                         return (
                           <svg
+                            key={index}
                             className="w-4 h-4 text-gray-200 dark:text-gray-600"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
@@ -124,23 +188,30 @@ const FoodMenu = ({ meals }) => {
                       }
                     })}
                   </div>
-                  <span className="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-blue-800 ms-3">
+                  <span className="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-orange-200 dark:text-orange-800 ms-3">
                     {meal.rating}
                   </span>
                 </div>
 
                 <a
-                  href="#"
-                  class="text-white bg-[#f97316] hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-2 py-0.2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleAddToCart(meal._id);
+                  }}
+                  class="text-white cursor-pointer bg-mainColor hover:bg-hoverColor focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800"
                 >
-                  +
+                  اضف الي العربه ←
                 </a>
               </div>
             </div>
           </div>
         ))}
       </div>
-      <PaginationComponent></PaginationComponent>
+      <PaginationComponent
+        numberOfPages={Math.ceil(meals.length / 9)}
+        currentPage={currentPage + 1}
+        onPageChange={onPageChange}
+      ></PaginationComponent>
 
       {/* <nav
         aria-label="Page navigation example"
@@ -190,7 +261,7 @@ const FoodMenu = ({ meals }) => {
             <a
               href="#"
               aria-current="page"
-              class="z-10 flex items-center justify-center px-3 h-8 leading-tight text-white border border-blue-300 bg-[#f97316] hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+              class="z-10 flex items-center justify-center px-3 h-8 leading-tight text-white border border-orange-300 bg-[#f97316] hover:bg-orange-100 hover:text-orange-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
             >
               3
             </a>

@@ -51,7 +51,7 @@ const CookerMenu = () => {
               <a href="#" className="relative">
                 <img
                   class=" rounded-t-lg w-full h-48 object-cover "
-                  src="باستا.png"
+                  src="../باستا.png"
                   alt="product image"
                 />
                 <span

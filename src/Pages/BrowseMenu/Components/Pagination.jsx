@@ -1,18 +1,18 @@
 import { Pagination } from "flowbite-react";
 import { useState } from "react";
 
-export function PaginationComponent() {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const onPageChange = (page) => setCurrentPage(page);
-
+export function PaginationComponent({
+  numberOfPages,
+  onPageChange,
+  currentPage,
+}) {
   return (
     <div className="flex overflow-x-auto sm:justify-center">
       <Pagination
         dir="rtl"
         className="flex overflow-x-auto mb-5 sm:justify-center"
         currentPage={currentPage}
-        totalPages={100}
+        totalPages={numberOfPages}
         onPageChange={onPageChange}
         previousLabel="السابق"
         nextLabel="التالي"

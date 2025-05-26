@@ -1,31 +1,28 @@
+import React from "react";
+import { useState } from "react";
 
-import React from 'react';
-import { useState } from 'react';
-
-export default function MealDetailes() {
-
+export default function MealDetailes({ mealDetails }) {
   const accordionData = [
     {
       title: "الوصف",
-      content: "كبسة الدجاج من أشهر الأكلات الشعبية في المملكة العربية السعودية ودول الخليج العربي. هذه الوجبة المميزة من الطاهي تحضر بوصفة عائلية توارثتها الأجيال، حيث يتم طهي الدجاج مع خلطة من التوابل الخاصة ثم يضاف إليه الأرز البسمتي عالي الجودة لينضج معاً ويعطي نكهة لا تقاوم."
+      content: mealDetails.description,
     },
     {
-      title: "طريقة التحضير",
-      content: "يتم تحضير الكبسة بسلق الدجاج مع البصل والثوم وخلطة التوابل حتى ينضج تماماً، ثم يضاف الأرز المنقوع مسبقاً ويترك لينضج على نار هادئة. تقدم الكبسة مع صلصة الطماطم الطازجة والدقوس (صلصة الباذنجان) والسلطة الخضراء."
+      title: "مكونات",
+      content: mealDetails.ingredients,
     },
     {
-      title: "التقيمات",
-      content: "حازت هذه الوجبه علي  تقيم  عالي  من العملاء بنسبه 4.2 ⭐️"
-    }
+      title: "طباخ الوجبة",
+      content: mealDetails.cook.firstName + " " + mealDetails.cook.lastName,
+    },
   ];
   const [openSection, setOpenSection] = useState(accordionData);
 
   console.log(openSection);
 
   return (
-    <div className="mt-8 space-y-5 mx-10" dir='rtl'>
-
-      <h1 className="text-xl px-5 font-bold text-center">  معلومات المنتج </h1>
+    <div className="mt-8 space-y-5 mx-10" dir="rtl">
+      <h1 className="text-xl px-5 font-bold text-center"> معلومات المنتج </h1>
 
       {openSection.map((item, index) => (
         <div key={index} className="  rounded-lg">
@@ -33,12 +30,9 @@ export default function MealDetailes() {
 
           {/* <hr /> */}
 
-          <p className="p-4 bg-gray-50 text-dark">
-            {item.content}
-          </p>
+          <p className="p-4 bg-gray-50 text-dark">{item.content}</p>
         </div>
-      ))
-      }
+      ))}
     </div>
   );
 }

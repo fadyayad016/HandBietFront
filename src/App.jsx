@@ -1,3 +1,14 @@
+import ChifsRating from "./Pages/Home/Components/ChifsRating";
+import CustomersOpinions from "./Pages/Home/Components/CustomersOpinions";
+import HowHandBietWorks from "./Pages/Home/Components/HowHandBietWorks";
+import HowItIsWorkComponent from "./Pages/Home/Components/HowItIsWorkComponent";
+import WhyUsComponents from "./Pages/Home/Components/WhyUsComponents";
+import ReadyToExperience from "./Pages/Home/Components/ReadyToExperience";
+import MainMeals from "./Pages/Home/Components/MainMeals";
+import ImgHome from "./Pages/Home/Components/ImgHome";
+import BestChefs from "./Pages/Home/Components/BestChefs";
+import HomePhoto from "./Pages/Home/Components/HomePhoto";
+import Header from "./components/Header";
 import React from "react";
 import CookerMenuParent from "./Pages/DasbordCooker/CookerMenuParent";
 import ContactUsPage from "./Pages/ContactUs/ContactUsPage";
@@ -11,17 +22,6 @@ import MealDetailsPage from "./Pages/MealDetails/MealDetailsPage";
 import Cart from "./Pages/Payment/Cart";
 import CheckOut from "./Pages/Payment/CheckOut";
 import Payment from "./Pages/Payment/Payment";
-import ChifsRating from "./Pages/Home/Components/ChifsRating";
-import CustomersOpinions from "./Pages/Home/Components/CustomersOpinions";
-import HowHandBietWorks from "./Pages/Home/Components/HowHandBietWorks";
-import HowItIsWorkComponent from "./Pages/Home/Components/HowItIsWorkComponent";
-import WhyUsComponents from "./Pages/Home/Components/WhyUsComponents";
-import ReadyToExperience from "./Pages/Home/Components/ReadyToExperience";
-import MainMeals from "./Pages/Home/Components/MainMeals";
-import ImgHome from "./Pages/Home/Components/ImgHome";
-import BestChefs from "./Pages/Home/Components/BestChefs";
-import HomePhoto from "./Pages/Home/Components/HomePhoto";
-import Header from "./components/Header";
 import Loading from "./components/Loading";
 import BrowseMenu from "./Pages/BrowseMenu/BrowseMenu";
 import UserProfilePage from "./Pages/DasbordCustmer/UserProfilePage";
@@ -41,15 +41,17 @@ import LoginForm from "./Pages/Login/LoginForm";
 import RegisterForm from "./Pages/Register/RegisterForm";
 import HeaderRoute from "./utils/homeRoute";
 import { ToastContainer } from "react-toastify";
-// import { useGetUserQuery } from "./features/api/authApi";
+import { useGetUserQuery } from "./features/api/authApi";
+import ChefDashboard from "./Pages/DasbordCooker/DasbordCooker";
+import OrderManagement from "./Pages/DasbordCooker/OrderManagment";
 
 function App() {
-  // const { isLoading } = useGetUserQuery(0, {
-  //   skip: !localStorage.getItem("accessToken"),
-  // });
-  // if (isLoading) {
-  //   return <Loading></Loading>;
-  // }
+  const { isLoading } = useGetUserQuery(0, {
+    skip: !localStorage.getItem("accessToken"),
+  });
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
   return (
     <>
       <BrowserRouter>
@@ -60,7 +62,7 @@ function App() {
           <Route path="/meals" element={<BrowseMenu />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/register" element={<RegisterForm />} />
-          <Route path="/meals/:id" element={<MealDetailes />} />
+          <Route path="/meals/:id" element={<MealDetailsPage />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/questions" element={<CommonQuestionPage />} />
@@ -75,6 +77,15 @@ function App() {
             path="/user-dashboard/setting-profile"
             element={<SettingUserProfile />}
           />
+          <Route path="/cooker-dashboard/menu" element={<CookerMenuParent />} />
+          <Route
+            path="/cooker-dashboard/orders"
+            element={<OrderManagement />}
+          />
+          <Route path="/cooker-dashboard/" element={<ChefDashboard />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
         <ToastContainer />
         {/* <Loading></Loading> */}

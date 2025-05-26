@@ -9,9 +9,19 @@ import {
   faLock,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-// import mealImg from "برجر.png";
+import {
+  useDeleteFavouriteMutation,
+  useGetFavouriteQuery,
+} from "../../features/api/favouriteApi";
 
 const FavouritePage = () => {
+  const { data: favourite, isLoading: isLoadingFavourite } =
+    useGetFavouriteQuery();
+  const [deleteFavourite] = useDeleteFavouriteMutation();
+
+  const removeFromFavourite = (mealId) => {
+    deleteFavourite(mealId);
+  };
   return (
     <>
       <div className="w-full flex" dir="rtl">
@@ -33,7 +43,7 @@ const FavouritePage = () => {
               </button>
             </div>
           </div>
-          <div className="bg-white p-1 rounded-xl shadow-md my-4 flex gap-3">
+          {/* <div className="bg-white p-1 rounded-xl shadow-md my-4 flex gap-3">
             <div className="flex items-center cursor-pointer text-[#6B7280]  p-2 mb-2">
               <FontAwesomeIcon icon={faUser} />
               <p className="ms-3">الملف الشخصي</p>
@@ -50,109 +60,48 @@ const FavouritePage = () => {
               <FontAwesomeIcon icon={faBell} />
               <p className="ms-3">الاشعارات</p>
             </div>
-          </div>
+          </div> */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
-            <div className="relative rounded-xl border border-gray-200 p-2 shadow hover:shadow-lg hover:-translate-y-1 transition">
-              <button className="absolute top-3 left-4 text-red-500 text-xl bg-white rounded-full p-1 w-8 h-8 flex items-center justify-center shadow  hover:bg-red-100 hover:scale-105 transition duration-300">
-                <FontAwesomeIcon icon={faHeart} />
-              </button>
-              <img
-                src="برجر.png"
-                alt="nmm"
-                className="rounded-lg h-40 w-full object-cover"
-              />
-              <div className="p-2 text-right">
-                <div className="flex justify-between items-center mt-2">
-                  <p className="font-semibold">hkk</p>
-                  <span className="text-orange-500 text-sm">hkkl</span>
-                </div>
-                <p className="text-gray-400 text-sm mt-1">من jkk</p>
-                <button className="mt-2 w-full text-center bg-orange-100 text-orange-500 rounded-md py-1 text-sm">
-                  أضف للسلة
-                </button>
+            {isLoadingFavourite ? (
+              <div className="flex justify-center items-center h-96">
+                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
               </div>
-            </div>
-
-            <div className="relative rounded-xl border border-gray-200 p-2 shadow hover:shadow-lg transition">
-              <button className="absolute top-3 left-4 text-red-500 text-xl bg-white rounded-full p-1 w-8 h-8 flex items-center justify-center shadow  hover:bg-red-100 hover:scale-105 transition duration-300">
-                <FontAwesomeIcon icon={faHeart} />
-              </button>
-              <img
-                src="برجر.png"
-                alt="nmm"
-                className="rounded-lg h-40 w-full object-cover"
-              />
-              <div className="p-2 text-right">
-                <div className="flex justify-between items-center mt-2">
-                  <p className="font-semibold">hkk</p>
-                  <span className="text-orange-500 text-sm">hkkl</span>
+            ) : (
+              favourite?.map((favourite) => (
+                <div
+                  key={favourite._id}
+                  className="relative rounded-xl border border-gray-200 p-2 shadow hover:shadow-lg hover:-translate-y-1 transition"
+                >
+                  <button
+                    onClick={() => removeFromFavourite(favourite._id)}
+                    type="button"
+                    className="absolute top-3 left-4 text-red-500 text-xl bg-white rounded-full p-1 w-8 h-8 flex items-center justify-center shadow  hover:bg-red-100 hover:scale-105 transition duration-300"
+                  >
+                    <FontAwesomeIcon icon={faHeart} />
+                  </button>
+                  <img
+                    src={favourite.images[0]}
+                    alt={favourite.name}
+                    className="rounded-lg h-40 w-full object-cover"
+                  />
+                  <div className="p-2 text-right">
+                    <div className="flex justify-between items-center mt-2">
+                      <p className="font-semibold"> {favourite.name}</p>
+                      <span className="text-orange-500 text-sm">
+                        {favourite.price} جنية
+                      </span>
+                    </div>
+                    <p className="text-gray-400 text-sm mt-1">
+                      من
+                      {favourite.cook.firstName + " " + favourite.cook.lastName}
+                    </p>
+                    <button className="mt-2 w-full text-center bg-orange-100 text-orange-500 rounded-md py-1 text-sm">
+                      أضف للسلة
+                    </button>
+                  </div>
                 </div>
-                <p className="text-gray-400 text-sm mt-1">من jkk</p>
-                <button className="mt-2 w-full text-center bg-orange-100 text-orange-500 rounded-md py-1 text-sm">
-                  أضف للسلة
-                </button>
-              </div>
-            </div>
-            <div className="relative rounded-xl border border-gray-200 p-2 shadow hover:shadow-lg transition">
-              <button className="absolute top-3 left-4 text-red-500 text-xl bg-white rounded-full p-1 w-8 h-8 flex items-center justify-center shadow  hover:bg-red-100 hover:scale-105 transition duration-300">
-                <FontAwesomeIcon icon={faHeart} />
-              </button>
-              <img
-                src="برجر.png"
-                alt="nmm"
-                className="rounded-lg h-40 w-full object-cover"
-              />
-              <div className="p-2 text-right">
-                <div className="flex justify-between items-center mt-2">
-                  <p className="font-semibold">hkk</p>
-                  <span className="text-orange-500 text-sm">hkkl</span>
-                </div>
-                <p className="text-gray-400 text-sm mt-1">من jkk</p>
-                <button className="mt-2 w-full text-center bg-orange-100 text-orange-500 rounded-md py-1 text-sm">
-                  أضف للسلة
-                </button>
-              </div>
-            </div>
-            <div className="relative rounded-xl border border-gray-200 p-2 shadow hover:shadow-lg transition">
-              <button className="absolute top-3 left-4 text-red-500 text-xl bg-white rounded-full p-1 w-8 h-8 flex items-center justify-center shadow  hover:bg-red-100 hover:scale-105 transition duration-300">
-                <FontAwesomeIcon icon={faHeart} />
-              </button>
-              <img
-                src="برجر.png"
-                alt="nmm"
-                className="rounded-lg h-40 w-full object-cover"
-              />
-              <div className="p-2 text-right">
-                <div className="flex justify-between items-center mt-2">
-                  <p className="font-semibold">hkk</p>
-                  <span className="text-orange-500 text-sm">hkkl</span>
-                </div>
-                <p className="text-gray-400 text-sm mt-1">من jkk</p>
-                <button className="mt-2 w-full text-center bg-orange-100 text-orange-500 rounded-md py-1 text-sm">
-                  أضف للسلة
-                </button>
-              </div>
-            </div>
-            <div className="relative rounded-xl border border-gray-200 p-2 shadow hover:shadow-lg transition ">
-              <button className="absolute top-3 left-4 text-red-500 text-xl bg-white rounded-full p-1 w-8 h-8 flex items-center justify-center shadow  hover:bg-red-100 hover:scale-105 transition duration-300">
-                <FontAwesomeIcon icon={faHeart} />
-              </button>
-              <img
-                src="برجر.png"
-                alt="nmm"
-                className="rounded-lg h-40 w-full object-cover"
-              />
-              <div className="p-2 text-right">
-                <div className="flex justify-between items-center mt-2">
-                  <p className="font-semibold">hkk</p>
-                  <span className="text-orange-500 text-sm">hkkl</span>
-                </div>
-                <p className="text-gray-400 text-sm mt-1">من jkk</p>
-                <button className="mt-2 w-full text-center bg-orange-100 text-orange-500 rounded-md py-1 text-sm">
-                  أضف للسلة
-                </button>
-              </div>
-            </div>
+              ))
+            )}
           </div>
         </div>
         <AsideBottonProfile />
