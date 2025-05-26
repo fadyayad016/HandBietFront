@@ -1,0 +1,56 @@
+        @keyframes pulse1 {
+
+            0%,
+            100% {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1) translateY(-15px);
+                opacity: 0.6;
+            }
+        }
+
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes wave {
+
+            0%,
+            60%,
+            100% {
+                transform: translateY(0);
+            }
+
+            30% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .loading {
+            animation-name: pulse1;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
