@@ -56,7 +56,7 @@ function App() {
     {/* <FrequentlyQuestions/> */}
     {/* <ContactUs/> */}
     {/* <AllQuestions/> */}
-    {/* <Meals/> */}
+    <Meals/>
     </>
   );
 }
